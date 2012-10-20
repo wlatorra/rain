@@ -5,7 +5,7 @@ public class Screen {
 	private int width, height;
 	public int[] pixels;
 	
-	int xtime = 0, ytime = 0;
+	int xtime = 100, ytime = 50;
 	int counter = 0;
 	
 	public Screen(int width, int height){
@@ -22,8 +22,8 @@ public class Screen {
 	
 	public void render(){
 		counter++;
-		if (counter % 10 == 0) xtime++;
-		if (counter % 80 == 0) ytime++;
+		if (counter % 100 == 0) xtime--;
+		if (counter % 100 == 0) ytime--;
 
 		for (int y = 0; y < height; y++){
 			if (ytime >= height) break;
